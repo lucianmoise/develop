@@ -1,0 +1,13 @@
+---
+- name: Plb1
+  hosts: localhost
+
+  tasks:
+    - name: register var
+      shell: uname -a
+      register: var1      
+
+    - name: Task1 
+      debug:
+        msg: echo {{ var1 }}
+
